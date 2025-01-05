@@ -5,23 +5,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*Gör länken fet när man hovrar över den*/
+        .nav-link:hover {
+            font-weight: bold;
+        }
+
+        /*Gör länken fet när man hovrar över den*/
+        p a:hover {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="tailwind.html">Tailwind</a></li>
-                <li><a href="bootstrap.html">Bootstrap</a></li>
-                <li><a href="publishing.html">Publisering</a></li>
+<body class="bg-light text-dark">
+    <header class="bg-danger p-4">
+        <nav class="container">
+            <ul class="list-unstyled nav flex-sm-row flex-column justify-content-end gap-5">
+                <li><a href="index.html" class="nav-link text-white">Startsida</a></li>
+                <li><a href="tailwind.html" class="nav-link text-white">Tailwind</a></li>
+                <li><a href="bootstrap.html" class="nav-link text-white">Bootstrap</a></li>
+                <li><a href="publishing.html" class="nav-link text-white">Publisering</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Bootstrap</h1>
-    <footer>
+
+    <!-- Huvudinnehåll -->
+    <main class="container py-5">
+        <h1 class="text-center text-danger mb-4">
+            Bootstrap
+        </h1>
+        <p class="bg-danger text-white p-4 rounded">Bootstrap är ett av de mest populära CSS-ramverken. Det som är
+            speciellt med Bootstrap är att det gör det enkelt att skapa responsiva och användarvänliga webbsidor.
+            Bootstrap har
+            ett stort antal färdiga komponenter och klasser för layout, typsnitt, knappar och mycket mer. Läs mer på: <a
+                href="https://getbootstrap.com/" class="text-white">getbootstrap.com</a>.</p>
+        <div class="row mb-4">
+            <div class="col-lg-6 mb-4">
+                <div class="border border-danger p-4 rounded">
+                    <p class="h5 text-dark">Fördelar</p>
+                    <ul>
+                        <li>Bootstrap erbjuder färdig design för exempelvis knappar, formulär och tabeller, vilket gör
+                            att man inte behöver göra allt jobb från grunden.</li>
+                        <li>Bootstrap gör det enkelt att skapa responsiva layouter som anpassar sig efter olika
+                            skärmstorlekar.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="border border-danger p-4 rounded">
+                    <p class="h5 text-dark">Nackdelar</p>
+                    <ul>
+                        <li>Eftersom Bootstrap har ett unikt utseende kan många sidor som använder sig av Bootstrap
+                            kännas väldigt lika, speciellt om man inte gör några anpassningar av koden.</li>
+                        <li>Bootstrap är ett stort ramverk, vilket kan göra att filstorleken på ett projekt blir onödigt
+                            stor.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabell -->
+        <h2 class="text-center text-danger mb-4">Restaurang Himla</h2>
+        <p class="bg-danger text-white p-4 rounded mb-4">Tack för att du besökte oss på Restaurang Himla. Lämna
+            gärna en recension och berätta vad du tyckte om
+            maten.</p>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover shadow-sm"
+                style="border-radius: 10px; overflow: hidden;">
+                <thead class="bg-danger text-white">
+                    <tr>
+                        <th>Namn</th>
+                        <th>Ålder</th>
+                        <th>Kön</th>
+                        <th>Meddelande</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Emma Larsson</td>
+                        <td>18-34</td>
+                        <td>Kvinna</td>
+                        <td>Jättegod mat!</td>
+                    </tr>
+                    <tr>
+                        <td>Mikael Eriksson</td>
+                        <td>55+</td>
+                        <td>Man</td>
+                        <td>Jag kan starkt rekommendera créme brûléen.</td>
+                    </tr>
+                    <tr>
+                        <td>Lovis Lidén</td>
+                        <td>0-17</td>
+                        <td>Föredrar att inte svara</td>
+                        <td>Detta var inte min favoritrestaurang...</td>
+                    </tr>
+                    <tr>
+                        <td>Anton Hillberg</td>
+                        <td>18-34</td>
+                        <td>Icke-binär</td>
+                        <td>Svinbra mat! Det bästa jag har ätit!</td>
+                    </tr>
+                    <tr>
+                        <td>Jairo Hincapie</td>
+                        <td>34-54</td>
+                        <td>Man</td>
+                        <td>Det var för lite kött.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Formulär -->
+        <p class="bg-danger text-white p-2 rounded-top"><strong>Lägg till ny recension</strong></p>
+        <form class="bg-white p-4 shadow-sm rounded-bottom">
+            <p>
+                <label for="name" class="form-label fw-bold">
+                    Namn:
+                </label>
+                <br>
+                <input id="name" type="text" name="name" class="form-control">
+            </p>
+            <br>
+            <p class="fw-bold">Ålder:</p>
+            <p class="form-check">
+                <input id="minor" type="checkbox" name="minor" class="form-check-input">
+                <label for="minor" class="form-check-label">
+                    0-17 år
+                </label>
+            </p>
+            <p class="form-check">
+                <input id="youngAdult" type="checkbox" name="youngAdult" class="form-check-input">
+                <label for="youngAdult" class="form-check-label">
+                    18-34 år
+                </label>
+            </p>
+            <p class="form-check">
+                <input id="adult" type="checkbox" name="adult" class="form-check-input">
+                <label for="adult" class="form-check-label">
+                    34-54 år
+                </label>
+            </p>
+            <p class="form-check">
+                <input id="oldAdult" type="checkbox" name="oldAdult" class="form-check-input">
+                <label for="oldAdult" class="form-check-label">
+                    55+ år
+                </label>
+            </p>
+            <br>
+            <p>
+                <label for="gender" class="form-label fw-bold">
+                    Kön:
+                </label>
+                <br>
+                <select id="gender" name="gender" class="form-select">
+                    <option value="" disabled selected>Välj från listan</option>
+                    <option value="0">Man</option>
+                    <option value="1">Kvinna</option>
+                    <option value="2">Icke-binär</option>
+                    <option value="3">Annat</option>
+                    <option value="4">Föredrar att inte svara</option>
+                </select>
+            </p>
+            <br>
+            <p>
+                <label for="message" class="form-label fw-bold">
+                    Meddelande:
+                </label>
+                <br>
+                <textarea id="message" name="message" class="form-control"></textarea>
+            </p>
+            <button type="submit" class="btn btn-danger">Lägg till</button>
+            <button type="reset" class="btn btn-secondary">Återställ</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-danger text-white text-center py-3">
         <p>Kursnamn: Fullstack-utveckling med ramverk, DT193G<br>Emma Larsson</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
