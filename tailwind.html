@@ -23,6 +23,138 @@
     <h1 class="text-3xl font-bold underline bg-blue-500">
         Tailwind
     </h1>
+    <main>
+        <p class="bg-blue-500">Tailwind CSS är ett CSS-ramverk där man använder små, enkla klasser direkt i HTML för att
+            snabbt skapa
+            anpassad design. Istället för att skriva stora och komplexa CSS-regler, använder man flera små klasser som
+            styr specifika stilinställningar, som färg eller avstånd. Läs mer på: <a
+                href="https://tailwindcss.com/">tailwindcss.com</a>.</p>
+        <div>
+            <p>Fördelar</p>
+            <ul>
+                <li>Tailwind gör det enkelt att designa en webbapplikation utan att behöva skriva mycket CSS, genom att
+                    använda klasser direkt i HTML.</li>
+                <li>Tailwind erbjuder standardiserade värden för färger, avstånd och typsnitt, vilket ger en enhetlig
+                    design.</li>
+                <li> Tailwind kan lätt anpassas genom att man modifierar tailwind.config.js.</li>
+            </ul>
+        </div>
+        <div>
+            <p>Nackdelar</p>
+            <ul>
+                <li> Många klasser i HTML kan göra koden rörig och svår att underhålla, särskilt i större projekt.</li>
+            </ul>
+        </div>
+        <h2>Restaurang Himla</h2>
+        <p>Tack för att du besökta oss på Restaurang Himla. Lämna gärna en recension och berätta om vad du tyckte om
+            maten.</p>
+        <!-- Tabell -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Namn</th>
+                    <th>Ålder</th>
+                    <th>Kön</th>
+                    <th>Meddelande</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Emma Larsson</td>
+                    <td>18-34</td>
+                    <td>Kvinna</td>
+                    <td>Jättegod mat!</td>
+                </tr>
+                <tr>
+                    <td>Mikael Eriksson</td>
+                    <td>55+</td>
+                    <td>Man</td>
+                    <td>Jag kan starkt rekommendera créme brûléen.</td>
+                </tr>
+                <tr>
+                    <td>Lovis Lidén</td>
+                    <td>0-17</td>
+                    <td>Föredrar att inte svara</td>
+                    <td>Detta var inte min favoritrestaurang...</td>
+                </tr>
+                <tr>
+                    <td>Anton Hillberg</td>
+                    <td>18-34</td>
+                    <td>Icke-binär</td>
+                    <td>Svinbra mat! Det bästa jag har ätit!</td>
+                </tr>
+                <tr>
+                    <td>Jairo Hincapie</td>
+                    <td>34-54</td>
+                    <td>Man</td>
+                    <td>Det var för lite kött.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Formulär -->
+
+        <form>
+            <p>
+                <label for="name">
+                    Namn:
+                </label>
+                <br>
+                <input id="name" type="text" name="name">
+            </p>
+            <br>
+            <p>Ålder:</p>
+            <p>
+                <input id="minor" type="checkbox" name="minor">
+                <label for="minor">
+                    0-17 år
+                </label>
+            </p>
+            <p>
+                <input id="youngAdult" type="checkbox" name="youngAdult">
+                <label for="youngAdult">
+                    18-34 år
+                </label>
+            </p>
+            <p>
+                <input id="adult" type="checkbox" name="adult">
+                <label for="adult">
+                    34-54 år
+                </label>
+            </p>
+            <p>
+                <input id="oldAdult" type="checkbox" name="oldAdult">
+                <label for="oldAdult">
+                    55+ år
+                </label>
+            </p>
+            <br>
+            <p>
+                <label for="gender">
+                    Kön:
+                </label>
+                <br>
+                <select id="gender" name="gender">
+                    <option value="" disabled selected>Välj från listan</option>
+                    <option value="0">Man</option>
+                    <option value="1">Kvinna</option>
+                    <option value="2">Icke-binär</option>
+                    <option value="3">Annat</option>
+                    <option value="4">Föredrar att inte svara</option>
+                </select>
+            </p>
+            <br>
+            <p>
+                <label for="message">
+                    Meddelande:
+                </label>
+                <br>
+                <textarea id="message" name="message"></textarea>
+            </p>
+            <input type="submit" value="Lägg till">
+            <input type="reset">
+        </form>
+    </main>
 </body>
 
 </html>
