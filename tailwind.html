@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -9,132 +9,154 @@
     <title>Tailwind</title>
 </head>
 
-<body>
-    <header>
+<body class="bg-gray-100 text-gray-900 max-w-screen-2xl mx-auto shadow-lg">
+
+    <!-- Header -->
+
+    <header class="bg-pink-500 p-4">
         <nav>
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="tailwind.html">Tailwind</a></li>
-                <li><a href="bootstrap.html">Bootstrap</a></li>
-                <li><a href="publishing.html">Publisering</a></li>
+            <ul
+                class="grid w-1/3 lg:justify-self-end lg:grid-cols-4 md:justify-self-end md:w-1/2 md:grid-cols-4 sm:w-1 sm:grid-cols-1 gap-y-5 py-4">
+                <li><a href="index.html" class="text-white hover:text-pink-200">Startsida</a></li>
+                <li><a href="tailwind.html" class="text-white hover:text-pink-200">Tailwind</a></li>
+                <li><a href="bootstrap.html" class="text-white hover:text-pink-200">Bootstrap</a></li>
+                <li><a href="publishing.html" class="text-white hover:text-pink-200">Publisering</a></li>
             </ul>
         </nav>
     </header>
-    <h1 class="text-3xl font-bold underline bg-blue-500">
-        Tailwind
-    </h1>
-    <main>
-        <p class="bg-blue-500">Tailwind CSS är ett CSS-ramverk där man använder små, enkla klasser direkt i HTML för att
+
+    <!-- Huvudinnehåll -->
+
+    <main class="p-10">
+        <h1 class="text-4xl font-bold text-center text-pink-600 mb-8">
+            Tailwind
+        </h1>
+        <p class="bg-pink-100 text-pink-800 p-4 rounded-lg mb-6">Tailwind CSS är ett CSS-ramverk där man använder små,
+            enkla klasser direkt i HTML för att
             snabbt skapa
             anpassad design. Istället för att skriva stora och komplexa CSS-regler, använder man flera små klasser som
             styr specifika stilinställningar, som färg eller avstånd. Läs mer på: <a
                 href="https://tailwindcss.com/">tailwindcss.com</a>.</p>
-        <div>
-            <p>Fördelar</p>
-            <ul>
-                <li>Tailwind gör det enkelt att designa en webbapplikation utan att behöva skriva mycket CSS, genom att
-                    använda klasser direkt i HTML.</li>
-                <li>Tailwind erbjuder standardiserade värden för färger, avstånd och typsnitt, vilket ger en enhetlig
-                    design.</li>
-                <li> Tailwind kan lätt anpassas genom att man modifierar tailwind.config.js.</li>
-            </ul>
+        <div class="grid lg:grid-cols-2 lg:gap-8 md:grid-cols-1">
+            <div class="mb-8 p-4 rounded-lg border-2 border-pink-800">
+                <p class="text-xl font-semibold text-gray-800 mb-2">Fördelar</p>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>Tailwind gör det enkelt att designa en webbapplikation utan att behöva skriva mycket CSS, genom
+                        att
+                        använda klasser direkt i HTML.</li>
+                    <li>Tailwind erbjuder standardiserade värden för färger, avstånd och typsnitt, vilket ger en
+                        enhetlig
+                        design.</li>
+                    <li> Tailwind kan lätt anpassas genom att man modifierar tailwind.config.js.</li>
+                </ul>
+            </div>
+            <div class="mb-8 p-4 rounded-lg border-2 border-pink-800">
+                <p class="text-xl font-semibold text-gray-800 mb-2">Nackdelar</p>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li> Många klasser i HTML kan göra koden rörig och svår att underhålla, särskilt i större projekt.
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <p>Nackdelar</p>
-            <ul>
-                <li> Många klasser i HTML kan göra koden rörig och svår att underhålla, särskilt i större projekt.</li>
-            </ul>
-        </div>
-        <h2>Restaurang Himla</h2>
-        <p>Tack för att du besökta oss på Restaurang Himla. Lämna gärna en recension och berätta om vad du tyckte om
+        <h2 class="text-3xl font-bold text-center text-pink-600 mb-8">Restaurang Himla</h2>
+        <p class="bg-pink-100 text-pink-800 p-4 rounded-lg mb-6">Tack för att du besökta oss på Restaurang Himla. Lämna
+            gärna en recension och berätta vad du tyckte om
             maten.</p>
         <!-- Tabell -->
-        <table>
-            <thead>
+         <div class="overflow-x-auto">
+        <table class="min-w-full mb-8 border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
+            <thead class="bg-pink-500 text-white">
                 <tr>
-                    <th>Namn</th>
-                    <th>Ålder</th>
-                    <th>Kön</th>
-                    <th>Meddelande</th>
+                    <th class="px-4 py-2">Namn</th>
+                    <th class="px-4 py-2">Ålder</th>
+                    <th class="px-4 py-2">Kön</th>
+                    <th class="px-4 py-2">Meddelande</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Emma Larsson</td>
-                    <td>18-34</td>
-                    <td>Kvinna</td>
-                    <td>Jättegod mat!</td>
+                <tr class="border-b">
+                    <td class="px-4 py-2">Emma Larsson</td>
+                    <td class="px-4 py-2">18-34</td>
+                    <td class="px-4 py-2">Kvinna</td>
+                    <td class="px-4 py-2">Jättegod mat!</td>
                 </tr>
-                <tr>
-                    <td>Mikael Eriksson</td>
-                    <td>55+</td>
-                    <td>Man</td>
-                    <td>Jag kan starkt rekommendera créme brûléen.</td>
+                <tr class="border-b">
+                    <td class="px-4 py-2">Mikael Eriksson</td>
+                    <td class="px-4 py-2">55+</td>
+                    <td class="px-4 py-2">Man</td>
+                    <td class="px-4 py-2">Jag kan starkt rekommendera créme brûléen.</td>
                 </tr>
-                <tr>
-                    <td>Lovis Lidén</td>
-                    <td>0-17</td>
-                    <td>Föredrar att inte svara</td>
-                    <td>Detta var inte min favoritrestaurang...</td>
+                <tr class="border-b">
+                    <td class="px-4 py-2">Lovis Lidén</td>
+                    <td class="px-4 py-2">0-17</td>
+                    <td class="px-4 py-2">Föredrar att inte svara</td>
+                    <td class="px-4 py-2">Detta var inte min favoritrestaurang...</td>
                 </tr>
-                <tr>
-                    <td>Anton Hillberg</td>
-                    <td>18-34</td>
-                    <td>Icke-binär</td>
-                    <td>Svinbra mat! Det bästa jag har ätit!</td>
+                <tr class="border-b">
+                    <td class="px-4 py-2">Anton Hillberg</td>
+                    <td class="px-4 py-2">18-34</td>
+                    <td class="px-4 py-2">Icke-binär</td>
+                    <td class="px-4 py-2">Svinbra mat! Det bästa jag har ätit!</td>
                 </tr>
-                <tr>
-                    <td>Jairo Hincapie</td>
-                    <td>34-54</td>
-                    <td>Man</td>
-                    <td>Det var för lite kött.</td>
+                <tr class="border-b">
+                    <td class="px-4 py-2">Jairo Hincapie</td>
+                    <td class="px-4 py-2">34-54</td>
+                    <td class="px-4 py-2">Man</td>
+                    <td class="px-4 py-2">Det var för lite kött.</td>
                 </tr>
             </tbody>
         </table>
+    </div>
 
         <!-- Formulär -->
-
-        <form>
+        <p class="bg-pink-500 text-white px-4 py-2 font-bold rounded-tl-lg rounded-tr-lg">Lägg till ny recension</p>
+        <form class="space-y-4 p-4 bg-white shadow-lg rounded-bl-lg rounded-br-lg">
             <p>
-                <label for="name">
+                <label for="name" class="block text-lg font-medium text-gray-800">
                     Namn:
                 </label>
                 <br>
-                <input id="name" type="text" name="name">
+                <input id="name" type="text" name="name"
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500">
             </p>
             <br>
-            <p>Ålder:</p>
+            <p class="block text-lg font-medium text-gray-800">Ålder:</p>
             <p>
-                <input id="minor" type="checkbox" name="minor">
-                <label for="minor">
+                <input id="minor" type="checkbox" name="minor"
+                    class="w-6 h-6 text-pink-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500">
+                <label for="minor" class="text-lg font-medium text-gray-800">
                     0-17 år
                 </label>
             </p>
             <p>
-                <input id="youngAdult" type="checkbox" name="youngAdult">
-                <label for="youngAdult">
+                <input id="youngAdult" type="checkbox" name="youngAdult"
+                    class="w-6 h-6 text-pink-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500">
+                <label for="youngAdult" class="text-lg font-medium text-gray-800">
                     18-34 år
                 </label>
             </p>
             <p>
-                <input id="adult" type="checkbox" name="adult">
-                <label for="adult">
+                <input id="adult" type="checkbox" name="adult"
+                    class="w-6 h-6 text-pink-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500">
+                <label for="adult" class="text-lg font-medium text-gray-800">
                     34-54 år
                 </label>
             </p>
             <p>
-                <input id="oldAdult" type="checkbox" name="oldAdult">
-                <label for="oldAdult">
+                <input id="oldAdult" type="checkbox" name="oldAdult"
+                    class="w-6 h-6 text-pink-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500">
+                <label for="oldAdult" class="text-lg font-medium text-gray-800">
                     55+ år
                 </label>
             </p>
             <br>
             <p>
-                <label for="gender">
+                <label for="gender" class="block text-lg font-medium text-gray-800">
                     Kön:
                 </label>
                 <br>
-                <select id="gender" name="gender">
+                <select id="gender" name="gender"
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500">
                     <option value="" disabled selected>Välj från listan</option>
                     <option value="0">Man</option>
                     <option value="1">Kvinna</option>
@@ -145,16 +167,24 @@
             </p>
             <br>
             <p>
-                <label for="message">
+                <label for="message" class="block text-lg font-medium text-gray-800">
                     Meddelande:
                 </label>
                 <br>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="message"
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
             </p>
-            <input type="submit" value="Lägg till">
-            <input type="reset">
+            <input type="submit" value="Lägg till" class="bg-pink-500 text-white p-2 rounded-md hover:bg-pink-600">
+            <input type="reset" class="bg-gray-500 text-white p-2 rounded-md hover:bg-gray-600">
         </form>
     </main>
+
+    <!-- Footer -->
+
+    <footer class="bg-pink-500 p-4 mt-8 text-center">
+        <p>Kursnamn: Fullstack-utveckling med ramverk, DT193G<br>Emma Larsson<br><a
+                href="mailto:emla2309@student.miun.se">Maila mig</a></p>
+    </footer>
 </body>
 
 </html>
