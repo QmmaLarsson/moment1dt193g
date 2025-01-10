@@ -12,10 +12,10 @@
 <body class="bg-gray-100 text-gray-900 max-w-screen-2xl mx-auto shadow-lg">
 
     <!-- Header -->
-    <header class="bg-pink-500 p-4">
+    <header class="bg-blue-500 p-4">
         <nav>
             <ul
-                class="grid w-1/3 lg:justify-self-end lg:grid-cols-4 md:justify-self-end md:w-1/2 md:grid-cols-4 sm:w-1 sm:grid-cols-1 gap-y-5 py-4">
+                class="grid lg:w-1/3 lg:justify-self-end lg:grid-cols-4 md:justify-self-end md:w-1/2 md:grid-cols-4 w-full grid-cols-1 gap-y-5 py-4">
                 <li><a href="index.html" class="text-white hover:font-bold">Startsida</a></li>
                 <li><a href="tailwind.html" class="text-white hover:font-bold">Tailwind</a></li>
                 <li><a href="bootstrap.html" class="text-white hover:font-bold">Bootstrap</a></li>
@@ -26,17 +26,17 @@
 
     <!-- Huvudinnehåll -->
     <main class="p-10">
-        <h1 class="text-4xl font-bold text-center text-pink-600 mb-8">
+        <h1 class="text-4xl font-bold text-center text-blue-600 mb-8">
             Tailwind
         </h1>
-        <p class="bg-pink-100 text-pink-800 p-4 rounded-lg mb-6">Tailwind CSS är ett CSS-ramverk där man använder små,
+        <p class="bg-blue-100 text-blue-800 p-4 rounded-lg mb-6">Tailwind CSS är ett CSS-ramverk där man använder små,
             enkla klasser direkt i HTML för att
             snabbt skapa
             anpassad design. Istället för att skriva stora och komplexa CSS-regler, använder man flera små klasser som
             styr specifika stilinställningar, som färg eller avstånd. Läs mer på: <a href="https://tailwindcss.com/"
                 class="underline hover:font-bold">tailwindcss.com</a>.</p>
         <div class="grid lg:grid-cols-2 lg:gap-8 md:grid-cols-1">
-            <div class="mb-8 p-4 rounded-lg border-2 border-pink-800">
+            <div class="mb-8 p-4 rounded-lg border-2 border-blue-800">
                 <p class="text-xl font-semibold text-gray-800 mb-2">Fördelar</p>
                 <ul class="list-disc pl-5 space-y-2 text-gray-700">
                     <li>Tailwind gör det enkelt att designa en webbapplikation utan att behöva skriva mycket CSS, genom
@@ -48,7 +48,7 @@
                     <li> Tailwind kan lätt anpassas genom att man modifierar tailwind.config.js.</li>
                 </ul>
             </div>
-            <div class="mb-8 p-4 rounded-lg border-2 border-pink-800">
+            <div class="mb-8 p-4 rounded-lg border-2 border-blue-800">
                 <p class="text-xl font-semibold text-gray-800 mb-2">Nackdelar</p>
                 <ul class="list-disc pl-5 space-y-2 text-gray-700">
                     <li> Många klasser i HTML kan göra koden rörig och svår att underhålla, särskilt i större projekt.
@@ -58,13 +58,13 @@
         </div>
 
         <!-- Tabell -->
-        <h2 class="text-3xl font-bold text-center text-pink-600 mb-8">Restaurang Himla</h2>
-        <p class="bg-pink-100 text-pink-800 p-4 rounded-lg mb-6">Tack för att du besökte oss på Restaurang Himla. Lämna
+        <h2 class="text-3xl font-bold text-center text-blue-600 mb-8">Restaurang Himla</h2>
+        <p class="bg-blue-100 text-blue-800 p-4 rounded-lg mb-6">Tack för att du besökte oss på Restaurang Himla. Lämna
             gärna en recension och berätta vad du tyckte om
             maten.</p>
         <div class="overflow-x-auto">
-            <table class="min-w-full mb-8 border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
-                <thead class="bg-pink-500 text-white">
+            <table class="min-w-full mb-8 bg-white shadow-lg rounded-lg overflow-hidden">
+                <thead class="bg-blue-500 text-white">
                     <tr>
                         <th class="px-4 py-2">Namn</th>
                         <th class="px-4 py-2">Ålder</th>
@@ -108,7 +108,7 @@
         </div>
 
         <!-- Formulär -->
-        <p class="bg-pink-500 text-white px-4 py-2 font-bold rounded-tl-lg rounded-tr-lg">Lägg till ny recension</p>
+        <p class="bg-blue-500 text-white px-4 py-2 font-bold rounded-tl-lg rounded-tr-lg">Lägg till ny recension</p>
         <form class="space-y-4 p-4 bg-white shadow-lg rounded-bl-lg rounded-br-lg">
             <p>
                 <label for="name" class="block text-lg font-medium text-gray-800">
@@ -116,34 +116,34 @@
                 </label>
                 <br>
                 <input id="name" type="text" name="name"
-                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
             </p>
             <br>
             <p class="block text-lg font-medium text-gray-800">Ålder:</p>
             <p>
                 <input id="minor" type="checkbox" name="minor"
-                    class="w-6 h-6 text-pink-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500">
+                    class="w-6 h-6 text-blue-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500">
                 <label for="minor" class="text-lg font-medium text-gray-800">
                     0-17 år
                 </label>
             </p>
             <p>
                 <input id="youngAdult" type="checkbox" name="youngAdult"
-                    class="w-6 h-6 text-pink-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500">
+                    class="w-6 h-6 text-blue-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500">
                 <label for="youngAdult" class="text-lg font-medium text-gray-800">
                     18-34 år
                 </label>
             </p>
             <p>
                 <input id="adult" type="checkbox" name="adult"
-                    class="w-6 h-6 text-pink-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500">
+                    class="w-6 h-6 text-blue-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500">
                 <label for="adult" class="text-lg font-medium text-gray-800">
                     34-54 år
                 </label>
             </p>
             <p>
                 <input id="oldAdult" type="checkbox" name="oldAdult"
-                    class="w-6 h-6 text-pink-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-pink-500">
+                    class="w-6 h-6 text-blue-500 border-2 border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500">
                 <label for="oldAdult" class="text-lg font-medium text-gray-800">
                     55+ år
                 </label>
@@ -155,7 +155,7 @@
                 </label>
                 <br>
                 <select id="gender" name="gender"
-                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500">
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <option value="" disabled selected>Välj från listan</option>
                     <option value="0">Man</option>
                     <option value="1">Kvinna</option>
@@ -171,15 +171,15 @@
                 </label>
                 <br>
                 <textarea id="message" name="message"
-                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
             </p>
-            <input type="submit" value="Lägg till" class="bg-pink-500 text-white p-2 rounded-md hover:bg-pink-600">
+            <input type="submit" value="Lägg till" class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">
             <input type="reset" class="bg-gray-500 text-white p-2 rounded-md hover:bg-gray-600">
         </form>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-pink-500 p-4 mt-8 text-center">
+    <footer class="bg-blue-500 p-4 mt-8 text-center">
         <p class="text-white">Kursnamn: Fullstack-utveckling med ramverk, DT193G<br>Emma Larsson</p>
     </footer>
 </body>
